@@ -14,7 +14,7 @@ A simple implementation of Git in Python, created for educational purposes.
 - View commit history
 - Switch between branches
 
-##Project structure
+## Project structure
 ```
 git/
 ├── README.md
