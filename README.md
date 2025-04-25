@@ -14,6 +14,41 @@ A simple implementation of Git in Python, created for educational purposes.
 - View commit history
 - Switch between branches
 
+##Project structure
+```
+git/
+├── README.md
+├── wyag.py               # Main entry point for the application
+├── commands/
+│   ├── __init__.py       # For initializing commands
+│   ├── init.py           # Initialize repository
+│   ├── hash_object.py    # Handle object hashing
+│   ├── cat_file.py       # View content of Git objects
+│   ├── write_tree.py     # Create tree objects
+│   ├── commit_tree.py    # Commit tree creation
+│   ├── ls_tree.py        # List tree contents
+│   ├── commit.py         # Create commit objects
+│   ├── branch.py         # Manage branches
+│   ├── checkout.py       # Switch branches
+│   └── log.py            # Show commit logs
+├── git_objects/
+│   ├── __init__.py       # For initializing object definitions
+│   ├── git_object.py     # Base class for all Git objects (Blob, Tree, Commit)
+│   ├── git_blob.py       # Blob object (file content)
+│   ├── git_tree.py       # Tree object (directory structure)
+│   └── git_commit.py     # Commit object
+├── refs/
+│   ├── heads/            # Branch references
+│   └── tags/             # Tag references
+├── objects/              # Store objects (blobs, trees, commits)
+├── tests/
+│   ├── test_log.py       # Testing commit history functionality
+│   ├── test_wyag_log.py  # Comparison with real Git logs
+│   ├── test_ref_only.py  # Reference resolution testing
+│   └── test_commands.py  # General command tests
+└── .gitignore
+```
+
 ## Usage
 
 ```bash
